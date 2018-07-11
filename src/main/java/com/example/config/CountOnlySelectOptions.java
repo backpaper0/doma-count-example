@@ -4,7 +4,11 @@ import org.seasar.doma.jdbc.SelectOptions;
 
 public class CountOnlySelectOptions extends SelectOptions {
 
-    public CountOnlySelectOptions() {
+    private CountOnlySelectOptions() {
         count();
+    }
+
+    public static SelectOptions get() {
+        return new CountOnlySelectOptions();
     }
 }

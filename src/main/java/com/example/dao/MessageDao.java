@@ -18,7 +18,7 @@ public interface MessageDao {
     List<Message> select(SelectOptions selectOptions);
 
     default long count() {
-        final CountOnlySelectOptions selectOptions = new CountOnlySelectOptions();
+        final SelectOptions selectOptions = CountOnlySelectOptions.get();
         select(selectOptions);
         return selectOptions.getCount();
     }

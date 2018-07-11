@@ -1,0 +1,12 @@
+CREATE TABLE messages (
+	id IDENTITY,
+	content VARCHAR(100) NOT NULL,
+	updated_at TIMESTAMP NOT NULL DEFAULT(CURRENT_TIMESTAMP())
+);
+
+INSERT INTO messages (content) VALUES
+ ('foo')
+,('bar')
+,('baz')
+,('qux')
+;

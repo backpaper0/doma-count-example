@@ -13,6 +13,8 @@ public class CountOnlySelectCommand<RESULT> extends SelectCommand<RESULT> {
 
     @Override
     public RESULT execute() {
+        //クエリ発行しない。
+        //戻り値も使わないのでnullを返す。
         return null;
     }
 }
